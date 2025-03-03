@@ -84,4 +84,4 @@ Contribuições são sempre bem-vindas! Por favor, leia o guia de contribuição
 
 ## 📞 Suporte
 
-Para suporte, envie um email para [seu-email@exemplo.com] ou abra uma issue no repositório. 
+Para suporte, envie um email para juiceluqi@gmail.com ou abra uma issue no repositório. 

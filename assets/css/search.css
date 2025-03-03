@@ -1,0 +1,134 @@
+.search-content {
+    max-width: 1280px;
+    margin: 80px auto 0;
+    padding: 20px;
+}
+
+.search-header {
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 0 20px;
+    background-color: #2ea44f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-filters {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 10px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    color: #586069;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.filter-btn.active {
+    color: #24292e;
+    border-bottom-color: #f9826c;
+    font-weight: 600;
+}
+
+.results-section {
+    margin-bottom: 40px;
+}
+
+.results-section h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Estilos para resultados de usuários */
+.user-result {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.user-result img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.user-info p {
+    margin: 5px 0 0;
+    color: #586069;
+    font-size: 14px;
+}
+
+/* Estilos para resultados de repositórios */
+.repository-result {
+    padding: 15px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.repository-result h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #0366d6;
+}
+
+.repository-result p {
+    margin: 5px 0;
+    color: #586069;
+}
+
+/* Estilos para resultados de posts */
+.post-result {
+    padding: 15px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+} 

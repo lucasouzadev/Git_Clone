@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca - GitClone</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+</head>
+<body>
+    <!-- Header (igual às outras páginas) -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1>GitClone</h1>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-item">
+                        <span class="nav-icon">🏠</span>
+                        Início
+                    </a>
+                    <a href="search.html" class="nav-item active">
+                        <span class="nav-icon">🔍</span>
+                        Explorar
+                    </a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="notification-icon-wrapper" id="notifications-toggle">
+                    <span class="notification-icon">🔔</span>
+                    <span class="notification-badge" id="notification-count">0</span>
+                </div>
+                <div class="dropdown">
+                    <img id="user-avatar" src="assets/img/default-avatar.png" alt="Avatar" class="avatar-small">
+                    <div class="dropdown-content">
+                        <a href="#" id="profile-link">Seu perfil</a>
+                        <a href="#" onclick="logout(); return false;">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="search-content">
+        <div class="search-header">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button onclick="performSearch()">Buscar</button>
+            </div>
+            <div class="search-filters">
+                <button class="filter-btn active" onclick="filterResults('all')">Todos</button>
+                <button class="filter-btn" onclick="filterResults('users')">Usuários</button>
+                <button class="filter-btn" onclick="filterResults('repositories')">Repositórios</button>
+                <button class="filter-btn" onclick="filterResults('posts')">Posts</button>
+            </div>
+        </div>
+
+        <div class="search-results">
+            <div id="users-results" class="results-section">
+                <h2>Usuários</h2>
+                <div id="users-list" class="results-list"></div>
+            </div>
+
+            <div id="repositories-results" class="results-section">
+                <h2>Repositórios</h2>
+                <div id="repositories-list" class="results-list"></div>
+            </div>
+
+            <div id="posts-results" class="results-section">
+                <h2>Posts</h2>
+                <div id="posts-list" class="results-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+</html> 

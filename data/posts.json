@@ -1,0 +1,28 @@
+{
+    "posts": [
+        {
+            "id": "67c5e5c4c1dd5",
+            "username": "lucas",
+            "content": "E ai!",
+            "userPhoto": "uploads\/lucas_1741022641.jfif",
+            "created_at": "2025-03-03 18:24:20",
+            "likes": [
+                "lucas",
+                "borges"
+            ],
+            "comments": [
+                {
+                    "id": "comment1",
+                    "username": "borges",
+                    "content": "Eu te amo",
+                    "userPhoto": "uploads\/borges_1741022730.jfif",
+                    "created_at": "2025-03-03 18:25:44",
+                    "isPinned": false
+                }
+            ],
+            "isPinned": false,
+            "repostCount": 0,
+            "originalPostId": null
+        }
+    ]
+}

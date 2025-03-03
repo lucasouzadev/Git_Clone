@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - GitClone</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1>GitClone</h1>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-item active">
+                        <span class="nav-icon">🏠</span>
+                        Início
+                    </a>
+                    <a href="search.html" class="nav-item">
+                        <span class="nav-icon">🔍</span>
+                        Explorar
+                    </a>
+                </nav>
+            </div>
+            <nav class="header-nav">
+                <div class="notification-icon-wrapper" id="notifications-toggle">
+                    <span class="notification-icon">🔔</span>
+                    <span class="notification-badge" id="notification-count">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Edit Content -->
+    <main class="profile-edit-content">
+        <h2>Editar Perfil</h2>
+        
+        <form id="profile-edit-form" class="edit-form" onsubmit="return false;">
+            <div class="photo-section">
+                <img id="current-photo" src="assets/img/default-avatar.png" alt="Foto de perfil" class="avatar-large">
+                <div class="photo-upload">
+                    <input type="file" id="photo-input" accept="image/*" style="display: none;">
+                    <button type="button" onclick="document.getElementById('photo-input').click()" class="upload-button">
+                        Alterar foto
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="company">Empresa</label>
+                <input type="text" id="company" name="company">
+            </div>
+
+            <div class="form-group">
+                <label for="location">Localização</label>
+                <input type="text" id="location" name="location">
+            </div>
+
+            <div class="form-group">
+                <label for="website">Website</label>
+                <input type="url" id="website" name="website">
+            </div>
+
+            <div class="form-actions">
+                <button type="button" onclick="window.location.href='view_profile.html'" class="cancel-button">
+                    Cancelar
+                </button>
+                <button type="submit" onclick="saveProfile()" class="save-button">
+                    Salvar alterações
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/edit-profile.js"></script>
+</body>
+</html> 

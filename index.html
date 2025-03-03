@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitClone</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1>GitClone</h1>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-item active">
+                        <span class="nav-icon">🏠</span>
+                        Início
+                    </a>
+                    <a href="search.html" class="nav-item">
+                        <span class="nav-icon">🔍</span>
+                        Explorar
+                    </a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="notification-icon-wrapper" id="notifications-toggle">
+                    <span class="notification-icon">🔔</span>
+                    <span class="notification-badge" id="notification-count">0</span>
+                </div>
+                <div class="dropdown">
+                    <img id="user-avatar" src="assets/img/default-avatar.png" alt="Avatar" class="avatar-small">
+                    <div class="dropdown-content">
+                        <a href="#" id="profile-link">Seu perfil</a>
+                        <a href="#" onclick="logout(); return false;">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Notifications dropdown -->
+        <div id="notifications-dropdown" class="notifications-dropdown" style="display: none;">
+            <div id="notifications-list"></div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <div class="sidebar">
+            <div class="profile-card">
+                <img id="sidebar-avatar" src="assets/img/default-avatar.png" alt="Avatar" class="avatar-medium">
+                <h2 id="sidebar-name">Carregando...</h2>
+                <p id="sidebar-username">@carregando</p>
+            </div>
+            <div class="repo-section">
+                <h3>Seus repositórios</h3>
+                <button onclick="showNewRepoModal()" class="btn-new-repo">Novo repositório</button>
+                <div id="repo-list"></div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="feed-header">
+                <h2>Feed de atividades</h2>
+            </div>
+            <div class="create-post">
+                <div class="post-form">
+                    <img src="assets/img/default-avatar.png" alt="Avatar" class="avatar-small" id="post-avatar">
+                    <textarea id="post-content" placeholder="O que você está pensando?"></textarea>
+                </div>
+                <div class="post-actions">
+                    <button onclick="createPost()" class="btn-post">Publicar</button>
+                </div>
+            </div>
+            <div id="posts-list"></div>
+        </div>
+    </main>
+
+    <!-- Modal para novo repositório -->
+    <div id="new-repo-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Criar novo repositório</h2>
+            <form id="new-repo-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="repo-name">Nome do repositório</label>
+                    <input type="text" id="repo-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="repo-description">Descrição (opcional)</label>
+                    <textarea id="repo-description"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeNewRepoModal()">Cancelar</button>
+                    <button type="submit" onclick="createRepository()">Criar repositório</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html> 

@@ -1,0 +1,400 @@
+.profile-content {
+    margin-top: 64px;
+    padding: 24px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-header {
+    background-color: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.profile-cover {
+    height: 200px;
+    background-color: #f6f8fa;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.profile-info {
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+}
+
+.avatar-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-top: -60px;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h1 {
+    margin: 0 0 4px;
+    font-size: 24px;
+}
+
+.profile-username {
+    color: #586069;
+    margin: 0 0 16px;
+}
+
+.profile-bio {
+    margin: 0 0 16px;
+    line-height: 1.5;
+}
+
+.profile-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: #586069;
+}
+
+.profile-meta a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.profile-meta a:hover {
+    text-decoration: underline;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+    color: #586069;
+}
+
+.profile-stats span {
+    font-weight: 600;
+    color: #24292e;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.edit-profile-button,
+.follow-button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.edit-profile-button {
+    background-color: #fafbfc;
+    border: 1px solid #e1e4e8;
+    color: #24292e;
+}
+
+.edit-profile-button:hover {
+    background-color: #f3f4f6;
+}
+
+.follow-button {
+    background-color: #2ea44f;
+    border: none;
+    color: white;
+}
+
+.follow-button:hover {
+    background-color: #2c974b;
+}
+
+.follow-button.following {
+    background-color: #fafbfc;
+    border: 1px solid #e1e4e8;
+    color: #24292e;
+}
+
+.follow-button.following:hover {
+    background-color: #f3f4f6;
+}
+
+.profile-tabs {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 16px;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    color: #586069;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.tab-button:hover {
+    color: #24292e;
+    background-color: #f6f8fa;
+}
+
+.tab-button.active {
+    color: #24292e;
+    font-weight: 600;
+    background-color: #f6f8fa;
+}
+
+.tab-icon {
+    font-size: 16px;
+}
+
+.tab-content {
+    background-color: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 24px;
+}
+
+.repositories-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.repository-card {
+    padding: 16px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.repository-card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.repository-card p {
+    color: #586069;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.repository-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: #586069;
+}
+
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post-card {
+    padding: 16px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.post-user-info {
+    flex: 1;
+}
+
+.post-username {
+    font-weight: 600;
+    color: #24292e;
+    text-decoration: none;
+}
+
+.post-time {
+    color: #586069;
+    font-size: 12px;
+}
+
+.post-content {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.post-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.post-action-btn {
+    background: none;
+    border: none;
+    color: #586069;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.post-action-btn:hover {
+    background-color: #f6f8fa;
+    color: #0366d6;
+}
+
+.comments-section {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e1e4e8;
+}
+
+.comment {
+    padding: 12px;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment.pinned {
+    background-color: #f6f8fa;
+    border-left: 3px solid #2ea44f;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.comment-info {
+    flex: 1;
+}
+
+.comment-username {
+    font-weight: 600;
+    color: #24292e;
+    text-decoration: none;
+}
+
+.comment-time {
+    color: #586069;
+    font-size: 12px;
+}
+
+.comment-content {
+    margin-left: 40px;
+    line-height: 1.5;
+}
+
+.comment-options {
+    position: relative;
+}
+
+.post-options {
+    position: relative;
+    margin-left: auto;
+}
+
+.options-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+    color: #586069;
+}
+
+.options-btn:hover {
+    color: #24292e;
+}
+
+.options-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.option-item {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    color: #24292e;
+}
+
+.option-item:hover {
+    background-color: #f6f8fa;
+}
+
+.option-item.delete {
+    color: #cb2431;
+}
+
+.option-item.delete:hover {
+    background-color: #ffebee;
+}
+
+.repost-info {
+    color: #586069;
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding-left: 8px;
+    border-left: 2px solid #e1e4e8;
+}
+
+@media (max-width: 768px) {
+    .profile-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar-large {
+        margin: -60px auto 0;
+    }
+
+    .profile-stats {
+        justify-content: center;
+    }
+
+    .profile-actions {
+        justify-content: center;
+    }
+
+    .repositories-list {
+        grid-template-columns: 1fr;
+    }
+} 

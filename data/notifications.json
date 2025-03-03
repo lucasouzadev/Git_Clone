@@ -1,0 +1,24 @@
+{
+    "notifications": [
+        {
+            "id": "67c5e618a0d86",
+            "type": "comment",
+            "from_username": "borges",
+            "to_username": "lucas",
+            "content": "Eu te amo",
+            "post_id": "67c5e5c4c1dd5",
+            "created_at": "2025-03-03 18:25:44",
+            "read": true
+        },
+        {
+            "id": "67c5e61363ee3",
+            "type": "like",
+            "from_username": "borges",
+            "to_username": "lucas",
+            "content": "",
+            "post_id": "67c5e5c4c1dd5",
+            "created_at": "2025-03-03 18:25:39",
+            "read": true
+        }
+    ]
+}

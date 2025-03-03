@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "username": "lucas",
+            "password": "12345",
+            "email": "lucas@gmail.com",
+            "name": "Lucas Dev",
+            "photoUrl": "uploads\/lucas_1741022641.jfif",
+            "bio": "E ai, man!",
+            "location": "",
+            "website": "",
+            "company": "",
+            "followers": [],
+            "following": [],
+            "repositories": [],
+            "created_at": "2025-03-03 18:22:33"
+        },
+        {
+            "username": "borges",
+            "password": "12345",
+            "email": "birges@gmail.com",
+            "name": "Borges Viado",
+            "photoUrl": "uploads\/borges_1741022730.jfif",
+            "bio": "",
+            "location": "",
+            "website": "",
+            "company": "",
+            "followers": [],
+            "following": [],
+            "repositories": [],
+            "created_at": "2025-03-03 18:24:49"
+        }
+    ]
+}

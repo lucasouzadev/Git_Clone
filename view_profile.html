@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - GitClone</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1>GitClone</h1>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-item">
+                        <span class="nav-icon">🏠</span>
+                        Início
+                    </a>
+                    <a href="search.html" class="nav-item">
+                        <span class="nav-icon">🔍</span>
+                        Explorar
+                    </a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="notification-icon-wrapper" id="notifications-toggle">
+                    <span class="notification-icon">🔔</span>
+                    <span class="notification-badge" id="notification-count">0</span>
+                </div>
+                <div class="dropdown">
+                    <img id="user-avatar" src="assets/img/default-avatar.png" alt="Avatar" class="avatar-small">
+                    <div class="dropdown-content">
+                        <a href="#" id="profile-link">Seu perfil</a>
+                        <a href="#" onclick="logout(); return false;">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Notifications dropdown -->
+        <div id="notifications-dropdown" class="notifications-dropdown" style="display: none;">
+            <div id="notifications-list"></div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="profile-content">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-cover"></div>
+            <div class="profile-info">
+                <img id="profile-avatar" src="assets/img/default-avatar.png" alt="Avatar" class="avatar-large">
+                <div class="profile-details">
+                    <h1 id="profile-name">Carregando...</h1>
+                    <p id="profile-username">@carregando</p>
+                    <p id="profile-bio"></p>
+                    <div class="profile-meta">
+                        <div id="location-info"></div>
+                        <div id="website-info"></div>
+                        <div id="company-info"></div>
+                    </div>
+                    <div class="profile-stats">
+                        <span id="repositories-count">0</span> repositórios
+                        <span id="followers-count">0</span> seguidores
+                        <span id="following-count">0</span> seguindo
+                    </div>
+                    <div id="profile-actions"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Tabs -->
+        <div class="profile-tabs">
+            <button class="tab-button active" onclick="switchTab('repositories')">
+                <span class="tab-icon">📚</span>
+                Repositórios
+            </button>
+            <button class="tab-button" onclick="switchTab('posts')">
+                <span class="tab-icon">📝</span>
+                Posts
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="repositories-tab" class="tab-content">
+            <div id="repositories-list" class="repositories-list">
+                <!-- Repositories will be loaded here -->
+            </div>
+        </div>
+
+        <div id="posts-tab" class="tab-content" style="display: none;">
+            <div id="posts-list" class="posts-list">
+                <!-- Posts will be loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html> 

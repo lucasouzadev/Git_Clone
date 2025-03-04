@@ -13,9 +13,9 @@ if (empty($query)) {
 }
 
 // Carregar dados
-$usersData = json_decode(file_get_contents(__DIR__ . '/../../data/users.json'), true)['users'];
-$repositoriesData = json_decode(file_get_contents(__DIR__ . '/../../data/repositories.json'), true)['repositories'];
-$postsData = json_decode(file_get_contents(__DIR__ . '/../../data/posts.json'), true)['posts'];
+$usersData = json_decode(file_get_contents(__DIR__ . '/../../data/users.json'), true)['users'] ?? [];
+$repositoriesData = json_decode(file_get_contents(__DIR__ . '/../../data/repositories.json'), true)['repositories'] ?? [];
+$postsData = json_decode(file_get_contents(__DIR__ . '/../../data/posts.json'), true)['posts'] ?? [];
 
 $results = [
     'users' => [],

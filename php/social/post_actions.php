@@ -173,6 +173,14 @@ switch ($action) {
             exit();
         }
 
+        // Verificar se já existe um repost deste post
+        foreach ($postsData['posts'] as $post) {
+            if ($post['originalPostId'] === $postId && $post['username'] === $username) {
+                echo json_encode(['success' => false, 'message' => 'Você já republicou este post']);
+                exit();
+            }
+        }
+
         // Criar novo post como repost
         $originalPost = $postsData['posts'][$postIndex];
         $newPost = [

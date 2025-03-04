@@ -16,6 +16,7 @@
 
 .profile-cover {
     height: 200px;
+    width: 100%;
     background-color: #f6f8fa;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;

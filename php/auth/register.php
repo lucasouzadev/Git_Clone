@@ -40,6 +40,7 @@ $newUser = [
     'email' => $data['email'],
     'name' => $data['name'],
     'photoUrl' => '',
+    'coverUrl' => '',
     'bio' => '',
     'location' => '',
     'website' => '',

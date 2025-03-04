@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     loadUserData();
     setupPhotoUpload();
+    setupCoverUpload();
 });
 
 async function loadUserData() {
@@ -26,6 +27,11 @@ async function loadUserData() {
             // Atualizar foto
             if (user.photoUrl) {
                 document.getElementById('current-photo').src = user.photoUrl;
+            }
+
+            // Atualizar capa
+            if (user.coverUrl) {
+                document.getElementById('current-cover').src = user.coverUrl;
             }
         }
     } catch (error) {
@@ -69,6 +75,42 @@ function setupPhotoUpload() {
             alert('Erro ao fazer upload da foto');
         }
     });
+}
+
+function setupCoverUpload() {
+    const coverInput = document.getElementById('cover-input');
+    coverInput.addEventListener('change', async function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        
+        if (!file.type.startsWith('image/')) {
+            alert('Por favor, selecione uma imagem');
+            return;
+        }
+        
+        const formData = new FormData();
+        formData.append('cover', file);
+        formData.append('username', currentUser);
+        
+        try {
+            const response = await fetch('php/profile/upload_cover.php', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json(); 
+            
+            if (data.success) {
+                document.getElementById('current-cover').src = data.coverUrl;
+                localStorage.setItem('userCover', data.coverUrl);
+            } else {
+                alert(data.message || 'Erro ao fazer upload da capa');  
+            }
+        } catch (error) {
+            console.error('Erro ao fazer upload:', error);
+            alert('Erro ao fazer upload da capa');
+        }
+    }); 
 }
 
 async function saveProfile() {

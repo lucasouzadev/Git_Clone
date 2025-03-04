@@ -1,6 +1,38 @@
 let currentQuery = '';
 let currentFilter = 'all';
 
+async function performSearch() {
+    const query = document.getElementById('search-input').value.trim();
+    
+    if (!query) {
+        clearResults(); // Limpa resultados se a consulta estiver vazia
+        return;
+    }
+    
+    currentQuery = query;
+    
+    try {
+        const response = await fetch(`php/search/search.php?q=${encodeURIComponent(query)}&type=${currentFilter}`);
+        
+        if (!response.ok) {
+            throw new Error('Erro na resposta do servidor');
+        }
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            displayResults(data.results);
+            // Atualizar URL com a busca
+            window.history.pushState({}, '', `search.html?q=${encodeURIComponent(query)}`);
+        } else {
+            alert(data.message || 'Erro ao realizar busca');
+        }
+    } catch (error) {
+        console.error('Erro na busca:', error);
+        alert('Erro ao realizar busca: ' + error.message);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const queryParam = urlParams.get('q');
@@ -18,30 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-async function performSearch() {
-    const query = document.getElementById('search-input').value.trim();
-    
-    if (!query) return;
-    
-    currentQuery = query;
-    
-    try {
-        const response = await fetch(`php/search/search.php?q=${encodeURIComponent(query)}&type=${currentFilter}`);
-        const data = await response.json();
-        
-        if (data.success) {
-            displayResults(data.results);
-            // Atualizar URL com a busca
-            window.history.pushState({}, '', `search.html?q=${encodeURIComponent(query)}`);
-        } else {
-            alert(data.message);
-        }
-    } catch (error) {
-        console.error('Erro na busca:', error);
-        alert('Erro ao realizar busca');
-    }
-}
-
 function filterResults(type) {
     currentFilter = type;
     
@@ -57,6 +65,16 @@ function filterResults(type) {
     }
 }
 
+function clearResults() {
+    document.getElementById('users-list').innerHTML = '';
+    document.getElementById('repositories-list').innerHTML = '';
+    document.getElementById('posts-list').innerHTML = '';
+    
+    document.getElementById('users-results').style.display = 'none';
+    document.getElementById('repositories-results').style.display = 'none'; 
+    document.getElementById('posts-results').style.display = 'none';
+}
+
 function displayResults(results) {
     // Exibir resultados de usuários
     const usersList = document.getElementById('users-list');
@@ -64,7 +82,7 @@ function displayResults(results) {
     
     if (currentFilter === 'all' || currentFilter === 'users') {
         usersSection.style.display = 'block';
-        if (results.users.length > 0) {
+        if (results.users && results.users.length > 0) {
             usersList.innerHTML = results.users.map(user => `
                 <div class="user-result">
                     <img src="${user.photoUrl || 'assets/img/default-avatar.png'}" alt="Avatar">
@@ -88,7 +106,7 @@ function displayResults(results) {
     
     if (currentFilter === 'all' || currentFilter === 'repositories') {
         reposSection.style.display = 'block';
-        if (results.repositories.length > 0) {
+        if (results.repositories && results.repositories.length > 0) {
             reposList.innerHTML = results.repositories.map(repo => `
                 <div class="repository-result">
                     <h3><a href="view_repository.html?id=${repo.id}">${repo.name}</a></h3>
@@ -113,7 +131,7 @@ function displayResults(results) {
     
     if (currentFilter === 'all' || currentFilter === 'posts') {
         postsSection.style.display = 'block';
-        if (results.posts.length > 0) {
+        if (results.posts && results.posts.length > 0) {
             postsList.innerHTML = results.posts.map(post => `
                 <div class="post-result">
                     <div class="post-header">

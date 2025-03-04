@@ -36,7 +36,7 @@
 
     <!-- Profile Edit Content -->
     <main class="profile-edit-content">
-        <h2>Editar Perfil</h2>
+        <h2 class="profile-edit-title">Editar Perfil</h2>
         
         <form id="profile-edit-form" class="edit-form" onsubmit="return false;">
             <div class="photo-section">
@@ -45,6 +45,16 @@
                     <input type="file" id="photo-input" accept="image/*" style="display: none;">
                     <button type="button" onclick="document.getElementById('photo-input').click()" class="upload-button">
                         Alterar foto
+                    </button>
+                </div>
+            </div>
+
+            <div class="cover-section">
+                <img id="current-cover" src="assets/img/default-cover.png" alt="Capa do perfil" class="cover-image">
+                <div class="cover-upload">
+                    <input type="file" id="cover-input" accept="image/*" style="display: none;">
+                    <button type="button" onclick="document.getElementById('cover-input').click()" class="upload-button">
+                        Alterar capa
                     </button>
                 </div>
             </div>

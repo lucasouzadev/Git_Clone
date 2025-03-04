@@ -54,7 +54,7 @@ async function loadProfile() {
             // Atualizar informações básicas
             document.getElementById('profile-name').textContent = user.name;
             document.getElementById('profile-username').textContent = `@${user.username}`;
-            document.getElementById('profile-bio').textContent = user.bio || '';
+            document.getElementById('profile-bio').textContent = user.bio || 'Sem bio';
             document.getElementById('profile-avatar').src = user.photoUrl || 'assets/img/default-avatar.png';
             
             // Atualizar meta informações
@@ -63,7 +63,7 @@ async function loadProfile() {
             }
             if (user.website) {
                 document.getElementById('website-info').innerHTML = 
-                    `🔗 <a href="${user.website}" target="_blank">${user.website}</a>`;
+                    `🔗 <a href="https://${user.website}" target="_blank">${user.website}</a>`;
             }
             if (user.company) {
                 document.getElementById('company-info').innerHTML = `🏢 ${user.company}`;

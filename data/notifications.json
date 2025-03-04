@@ -1,6 +1,76 @@
 {
     "notifications": [
         {
+            "id": "67c65e75309ec",
+            "type": "like",
+            "from_username": "borges",
+            "to_username": "lucas",
+            "content": "",
+            "post_id": "67c60d23d16b1",
+            "created_at": "2025-03-04 02:59:17",
+            "read": false
+        },
+        {
+            "id": "67c60b9568e88",
+            "type": "like",
+            "from_username": "borges",
+            "to_username": "lucas",
+            "content": "",
+            "post_id": "67c607f36fdd0",
+            "created_at": "2025-03-03 21:05:41",
+            "read": true
+        },
+        {
+            "id": "67c606301125d",
+            "type": "like",
+            "from_username": "lucas",
+            "to_username": "borges",
+            "content": "",
+            "post_id": "67c605cfbebfc",
+            "created_at": "2025-03-03 20:42:40",
+            "read": true
+        },
+        {
+            "id": "67c606096e459",
+            "type": "comment",
+            "from_username": "borges",
+            "to_username": "lucas",
+            "content": "oi",
+            "post_id": "67c6059e45d13",
+            "created_at": "2025-03-03 20:42:01",
+            "read": true
+        },
+        {
+            "id": "67c605dbc0ebf",
+            "type": "follow",
+            "from_username": "borges",
+            "to_username": "lucas",
+            "content": "",
+            "post_id": null,
+            "created_at": "2025-03-03 20:41:15",
+            "read": true
+        },
+        {
+            "id": "67c605c538e7b",
+            "type": "repost",
+            "from_username": "borges",
+            "to_username": "lucas",
+            "content": "",
+            "post_id": "67c5e5c4c1dd5",
+            "created_at": "2025-03-03 20:40:53",
+            "read": true
+        },
+        {
+            "id": "67c605c028909",
+            "type": "like",
+            "from_username": "borges",
+            "to_username": "lucas",
+            "content": "",
+            "post_id": "67c6059e45d13",
+            "created_at": "2025-03-03 20:40:48",
+            "read": true
+        },
+        {
             "id": "67c5e618a0d86",
             "type": "comment",
             "from_username": "borges",

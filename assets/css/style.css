@@ -7,7 +7,6 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
     color: #24292e;
     background-color: #f6f8fa;
 }
@@ -15,7 +14,7 @@ body {
 /* Estilos da página de autenticação */
 .auth-page {
     min-height: 100vh;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     background-color: #f6f8fa;
@@ -53,6 +52,7 @@ body {
     display: block;
     margin-bottom: 5px;
     font-weight: 500;
+    color: #24292e;
 }
 
 .form-group input {
@@ -93,4 +93,89 @@ button:hover {
 
 .auth-link a:hover {
     text-decoration: underline;
+}
+
+.photo-section, .cover-section {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-edit-title {
+    margin-bottom: 20px;
+    padding: 20px;
 } 
+
+.profile-edit-content {
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+}
+
+.cover-section {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.cover-image {
+    width: 100%;
+    height: 200px; /* Definindo uma altura fixa para o formato de banner */
+    object-fit: cover; /* Faz com que a imagem cubra todo o espaço disponível */
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.upload-button {
+    background-color: #2e46a4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #7240df;
+}
+
+.form-group textarea {
+    padding: 10px;
+    width: 100%;
+    max-height: 100px;
+    resize: none;
+} 
+
+.edit-form {
+    display: block;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.feed-header h2 {
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cancel-button, .save-button {
+    width: auto; /* Alterado para auto para permitir que os botões fiquem lado a lado */
+    padding: 10px;
+    background-color: #2e46a4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-right: 10px; /* Adicionado espaçamento entre os botões */
+}
+
+.cancel-button:hover, .save-button:hover {
+    background-color: #7240df;
+}

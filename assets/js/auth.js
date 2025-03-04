@@ -26,6 +26,7 @@ async function login() {
         if (data.success) {
             localStorage.setItem('username', username);
             localStorage.setItem('userPhoto', data.user.photoUrl || '');
+            localStorage.setItem('userCover', data.user.coverUrl || '');
             window.location.replace('index.html');
         } else {
             alert(data.message || 'Erro ao fazer login');

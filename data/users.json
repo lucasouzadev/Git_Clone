@@ -10,7 +10,9 @@
             "location": "",
             "website": "",
             "company": "",
-            "followers": [],
+            "followers": [
+                "borges"
+            ],
             "following": [],
             "repositories": [],
             "created_at": "2025-03-03 18:22:33"
@@ -21,12 +23,14 @@
             "email": "birges@gmail.com",
             "name": "Borges Viado",
             "photoUrl": "uploads\/borges_1741022730.jfif",
-            "bio": "",
-            "location": "",
-            "website": "",
-            "company": "",
+            "bio": "Eu sou viado.",
+            "location": "Inferno",
+            "website": "youtube.com",
+            "company": "Molestamento Virtual",
             "followers": [],
-            "following": [],
+            "following": [
+                "lucas"
+            ],
             "repositories": [],
             "created_at": "2025-03-03 18:24:49"
         }
